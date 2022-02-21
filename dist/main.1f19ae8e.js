@@ -121,8 +121,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var str = "\n010-1234-5678\nthesecon@gmail.com\nhttp://www.omdbapi.com/?apikey=70ccc60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\nabbcccdddd\n"; // const regexp = new RegExp('the','gi')
 // console.log(str.match(regexp)) // (3) ['the', 'The', 'the']
 
-var regexp = /the/gi;
-console.log(str.match(regexp)); // (3) ['the', 'The', 'the']
+var regexp = /fox/gi; // console.log(regexp.test(str)) 
+
+str = str.replace(regexp, 'AAA');
+console.log(str);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -151,7 +153,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4149" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "3698" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
