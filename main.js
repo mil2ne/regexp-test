@@ -5,24 +5,16 @@ https://www.omdbapi.com/?apikey=70ccc60c&s=frozen
 The quick brown fox jumps over the lazy dog.
 abbcccdddd
 http://localhost:1234
+동해물과 백두산이 마르고 닳도록
 `
 
-// const regexp = new RegExp('the','gi')
-// console.log(str.match(regexp)) // (3) ['the', 'The', 'the']
+
 
 console.log(
-  str.match(/h..p/g)
+  str.match(/[가-힣]{1,}/g)
   )
 
 console.log(
-  str.match(/fox|dog/g)
-  )
-
-console.log(
-  str.match(/https?/g)
-  )
-
-console.log(
-  str.match(/\b\w{2,3}\b/g)
+  str.match(/[0-9]{1,}/g)
   )
 
